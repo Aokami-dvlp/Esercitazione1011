@@ -21,4 +21,7 @@ selectedFunko?: Funko;
     this.selectedFunko = funko;
     }
 
+  closeDetails(){
+    this.selectedFunko = undefined;
+  }
 }

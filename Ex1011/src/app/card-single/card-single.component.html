@@ -1,6 +1,6 @@
 <div class="card mb-2">
-  <img src="{{funko.img}}">
-  <strong>{{funko.title}}</strong>
-  {{funko.price | currency:"USD"}}
+  <img src="{{funko?.img}}">
+  <strong>{{funko?.title}}</strong>
+  {{funko?.price | currency:"EUR"}}
   <button class="mb-2" (click)="selectFunko(funko)">Show details</button>
 </div>

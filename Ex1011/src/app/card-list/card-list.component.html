@@ -10,11 +10,13 @@
 </aside>
 
 <div class="hero d-flex flex-column justify-content-center align-items-center">
+  <div  *ngIf="!selectedFunko">
   <h2 class="text-center mb-3">Benvenuti nello shop di</h2>
   <img src="https://www.develhope.co/_nuxt/img/cav_black.9dc2b13.svg" alt="logo develhope">
   <p class="mt-3">Clicca sui dettagli del prodotto per visualizzare tutte le informazioni</p>
   </div>
+  <app-card-detail [funko]="selectedFunko" *ngIf="selectedFunko" (closedDetails)="closeDetails()"></app-card-detail>
+</div>
 
- <app-card-detail></app-card-detail>
 
   </div>

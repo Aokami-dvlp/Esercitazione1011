@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Funko } from '../models/funko';
 
 @Component({
@@ -8,11 +8,16 @@ import { Funko } from '../models/funko';
 })
 export class CardDetailComponent implements OnInit {
 
-@Input() funko!: Funko;
+@Input() funko?: Funko;
+@Output() closedDetails = new EventEmitter();
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  closeDetails() {
+    this.closedDetails.emit();
+  }
 }

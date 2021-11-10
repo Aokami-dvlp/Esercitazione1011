@@ -1,11 +1,15 @@
-<div class="details">
+<div class="details card">
+<div class="d-flex flex-column align-items-center">
+<h1>{{funko?.title}}</h1>
+<img src="{{funko?.img}}" alt="{{funko?.title}}">
+</div>
+<p>Anno di uscita: {{funko?.exitYear}}</p>
+<p>Peso: {{funko?.productWeight}}g</p>
+<p>Pezzi prodotti: {{funko?.itemsProduced}}</p>
 
-<h1>{{funko.title}}</h1>
-<img src="{{funko.img}}" alt="{{funko.title}}">
-<p>Anno di uscita: {{funko.exitYear}}</p>
-<p>Peso: {{funko.productWeight}}g</p>
-<p>Pezzi prodotti: {{funko.itemsProduced}}</p>
+<p class="description">{{funko?.description}}</p>
 
-<p class="description">{{funko.description}}</p>
+<button class="mb-2" (click)="closeDetails()">Close</button>
+
 
 </div>
