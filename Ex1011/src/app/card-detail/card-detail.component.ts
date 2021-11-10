@@ -8,7 +8,7 @@ import { Funko } from '../models/funko';
 })
 export class CardDetailComponent implements OnInit {
 
-@Input() funko?: Funko;
+@Input() funko!: Funko;
 
   constructor() { }
 

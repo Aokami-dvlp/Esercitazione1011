@@ -1,5 +1,5 @@
 import { Funko } from './../models/funko';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card-single',
@@ -9,10 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CardSingleComponent implements OnInit {
 
 @Input() funko!:Funko;
+@Output() selectedFunko = new EventEmitter<Funko>();
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectFunko(funko: Funko) {
+    this.selectedFunko.emit(funko);
   }
 
 }

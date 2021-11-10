@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FUNKOS } from '../models/funko-mock';
+import { Funko } from '../models/funko';
 
 @Component({
   selector: 'app-card-list',
@@ -9,10 +10,15 @@ import { FUNKOS } from '../models/funko-mock';
 export class CardListComponent implements OnInit {
 
 funkos = FUNKOS;
+selectedFunko?: Funko;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  selectFunko(funko: Funko) {
+    this.selectedFunko = funko;
+    }
 
 }

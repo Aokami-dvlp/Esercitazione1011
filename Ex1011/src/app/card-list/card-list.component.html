@@ -1,11 +1,13 @@
 <div class="d-flex">
 
+<aside>
 <h1>Develhope Shop</h1>
 <ul>
   <li *ngFor="let funko of funkos">
-    <app-card-single [funko]="funko"></app-card-single>
+    <app-card-single [funko]="funko" (selectedFunko)="selectFunko($event)"></app-card-single>
   </li>
 </ul>
+</aside>
 
 <div class="hero d-flex flex-column justify-content-center align-items-center">
   <h2 class="text-center mb-3">Benvenuti nello shop di</h2>
@@ -13,5 +15,6 @@
   <p class="mt-3">Clicca sui dettagli del prodotto per visualizzare tutte le informazioni</p>
   </div>
 
+ <app-card-detail></app-card-detail>
 
   </div>

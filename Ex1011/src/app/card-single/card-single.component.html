@@ -2,5 +2,5 @@
   <img src="{{funko.img}}">
   <strong>{{funko.title}}</strong>
   {{funko.price | currency:"USD"}}
-  <button class="mb-2">Show details</button>
+  <button class="mb-2" (click)="selectFunko(funko)">Show details</button>
 </div>
