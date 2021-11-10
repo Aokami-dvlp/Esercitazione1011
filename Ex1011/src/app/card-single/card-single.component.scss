@@ -1,0 +1,16 @@
+.card{
+  height: 270px;
+  width: 210px;
+  img{
+    width: 180px;
+  }
+  button{
+    color:white;
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+    border: none;
+    border-radius: 50px;
+    background-color: orange;
+  }
+}

@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardSingleComponent implements OnInit {
 
-@Input() funko?:Funko;
+@Input() funko!:Funko;
 
   constructor() { }
 
